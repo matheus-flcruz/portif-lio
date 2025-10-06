@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --bg-color: #0F0E17;
+    --color-secundaria: #6A0DAD;
+    --color-terciaria: #00AEEF;
+    --color-texto1: #FFFFFE;
+    --color-texto2: #A7A9BE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto1);
+    line-height: 1.6;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-verde-principal);
+}
+
+/* HEADER */
+
+
+
+/* MAIN */
+
+
+
+/* FOOTER */
+
+footer {
+    background: var(--cor-preto);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 2rem;
+}
