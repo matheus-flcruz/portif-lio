@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --bg-color: #0F0E17;
-    --color-secundaria: #6A0DAD;
-    --color-terciaria: #00AEEF;
-    --color-texto1: #FFFFFE;
-    --color-texto2: #A7A9BE;
+     --cor-background: #121212; /* Um preto não tão forte */
+    --cor-texto-primario: #FFFFFF; /* Branco */
+    --cor-texto-secundario: #a7a7a7; /* Um cinza claro para textos de apoio */
+    --cor-destaque: #7C3AED; /* Um roxo vibrante para links e botões */
+    --cor-surface: #1E1E1E; /* Cor de "superfície" para os cards de projeto */
 }
 
 * {
@@ -15,9 +15,9 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--color-texto1);
+    background-color: var(--cor-background);
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-primario);
     line-height: 1.6;
 }
 
@@ -36,7 +36,19 @@ a {
 
 /* MAIN */
 
+/* Classe utilitária para centralizar o conteúdo */
+.container {
+    width: 90%; /* Em telas pequenas, ocupa 90% da largura */
+    max-width: 1000px; /* Em telas grandes, a largura máxima será 1000px */
+    margin: 0 auto; /* O truque mágico para centralizar horizontalmente */
+    padding: 20px 0; /* Um espaçamento vertical */
+}
 
+/* Vamos aplicar o container a todas as nossas seções */
+.hero, .projects, .skills, .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 /* FOOTER */
 
