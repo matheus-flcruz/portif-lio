@@ -25,6 +25,12 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-weight: 500;
+}
+
 /* HEADER */
 
 
@@ -94,6 +100,67 @@ li {
 .social-links a img {
     width: 50px; /* Ajuste o tamanho conforme necessário */
     height: 50px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* PROJECTS */
+
+.projects {
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    /* Cria colunas de no mínimo 280px e no máximo 1 fração do espaço.
+       Isso é a chave para a responsividade! */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem; /* Espaço entre os cards */
+    text-align: left; /* Alinha o texto dos cards à esquerda */
+}
+
+.project-card {
+    background-color: var(--cor-surface); /* Nossa cor de superfície */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-15px); /* Efeito sutil de levantar o card */
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    padding: 0 1.5rem;
+    flex-grow: 1; /* Truque de flexbox para empurrar os links para baixo */
+}
+
+.project-links {
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* FOOTER */
