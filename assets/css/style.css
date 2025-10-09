@@ -33,7 +33,66 @@ a {
 
 /* HEADER */
 
+header {
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.8); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de vidro embaçado (super moderno!) */
+    z-index: 1000; /* Garante que o header fique na frente de todo o resto */
+    border-bottom: 1px solid var(--cor-surface);
+}
 
+header nav {
+    display: flex;
+    justify-content: space-between; /* Joga o logo pra um lado e o menu pro outro */
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    color: var(--cor-texto-primario);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os itens do menu */
+}
+
+.nav-menu a {
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--cor-texto-primario);
+}
+
+/* Efeito de sublinhado animado */
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
 
 /* MAIN */
 
@@ -60,6 +119,7 @@ a {
     align-items: center; /* Centraliza horizontalmente */
     text-align: center; /* Garante que o texto dentro dos elementos também seja centralizado */
     min-height: 80vh; /* Faz a seção ter no mínimo 80% da altura da tela */
+    padding-top: 100px; /* Adiciona um espaço no topo para não ficar atrás do header */
 }
 
 .hero h1 {
@@ -240,6 +300,92 @@ a {
     font-size: 1rem;
     font-weight: 500;
     color: var(--cor-texto-secundario);
+}
+
+/* FORMULÁRIO */
+
+/* --- Seção de Contato --- */
+.contact {
+    text-align: center;
+    padding-bottom: 80px; /* Mais espaço no final */
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--cor-texto-secundario);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-surface);
+    background-color: var(--cor-surface);
+    color: var(--cor-texto-primario);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3); /* Um brilho sutil ao focar */
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-primario);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%; /* Botão com largura total */
+}
+
+.submit-button:hover {
+    transform: scale(1.02);
+    background-color: #6D28D9;
+}
+
+/* Em telas maiores, o botão não precisa ter a largura total */
+@media (min-width: 768px) {
+    .submit-button {
+        width: auto;
+    }
 }
 
 /* FOOTER */
