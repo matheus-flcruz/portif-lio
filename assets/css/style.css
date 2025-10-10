@@ -200,6 +200,7 @@ header nav {
 
 .projects {
     text-align: center;
+    padding-left:25px;
 }
 
 .projects h2 {
@@ -261,6 +262,7 @@ header nav {
 
 .skills {
     text-align: center;
+    padding-left: 25px;
 }
 
 .skills h2 {
