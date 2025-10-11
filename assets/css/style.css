@@ -112,6 +112,23 @@ header nav {
 
 /* MENU HAMBURGER */
 
+.menu-hamburguer {
+    display: none; /* Escondido por padrão, só aparece no mobile */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+    /* Fica na frente do menu */
+}
+
+.menu-hamburguer span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--cor-texto-primario);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
 
 
 /* MAIN */
@@ -485,3 +502,43 @@ footer {
 }
 
 /* MENU HAMBURGER */
+
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: flex;
+        /* Agora sim, aparece no mobile */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: -100%; /* Começa fora da tela */
+        width: 200px;
+        height: calc(100% - 80px);
+        background-color: rgba(18, 18, 18, 0.8);
+        backdrop-filter: blur(10px); /* Adiciona o mesmo efeito de vidro do header! */
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    }
+
+    .nav-menu.active {
+        right: 0;
+        /* Quando ativo, o menu desliza para dentro da tela */
+    }
+
+    .menu-hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
