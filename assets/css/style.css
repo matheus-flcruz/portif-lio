@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-     --cor-background: #121212; /* Um preto não tão forte */
+    --cor-primaria: #020228; /* Roxo vibrante */
     --cor-texto-primario: #FFFFFF; /* Branco */
     --cor-texto-secundario: #a7a7a7; /* Um cinza claro para textos de apoio */
-    --cor-destaque: #7C3AED; /* Um roxo vibrante para links e botões */
-    --cor-surface: #1E1E1E; /* Cor de "superfície" para os cards de projeto */
+    --cor-destaque: #5516ba; /* Um roxo vibrante para links e botões */
+    --cor-surface:  rgba(211, 211, 211, 0.06); /* Cor de "superfície" para os cards de projeto */
 }
 
 * {
@@ -17,7 +17,7 @@
 
 
 body {
-    background-color: var(--cor-background);
+    background-color: var(--cor-primaria);
     font-family: 'Poppins', sans-serif;
     color: var(--cor-texto-primario);
     line-height: 1.6;
@@ -36,19 +36,24 @@ a {
 /* HEADER */
 
 header {
-    position: fixed; /* Fixa o header no topo */
+    position: fixed;
+    /* Fixa o header no topo */
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(18, 18, 18, 0.8); /* Fundo semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de vidro embaçado (super moderno!) */
-    z-index: 1000; /* Garante que o header fique na frente de todo o resto */
+    background-color: rgba(18, 18, 18, 0.8);
+    /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Efeito de vidro embaçado (super moderno!) */
+    z-index: 1000;
+    /* Garante que o header fique na frente de todo o resto */
     border-bottom: 1px solid var(--cor-surface);
 }
 
 header nav {
     display: flex;
-    justify-content: space-between; /* Joga o logo pra um lado e o menu pro outro */
+    justify-content: space-between;
+    /* Joga o logo pra um lado e o menu pro outro */
     align-items: center;
     height: 80px;
 }
@@ -68,9 +73,11 @@ header nav {
 }
 
 .nav-menu {
-    list-style: none; /* Remove as bolinhas da lista */
+    list-style: none;
+    /* Remove as bolinhas da lista */
     display: flex;
-    gap: 1.5rem; /* Espaço entre os itens do menu */
+    gap: 1.5rem;
+    /* Espaço entre os itens do menu */
 }
 
 .nav-menu a {
@@ -103,18 +110,29 @@ header nav {
     width: 100%;
 }
 
+/* MENU HAMBURGER */
+
+
+
 /* MAIN */
 
 /* Classe utilitária para centralizar o conteúdo */
 .container {
-    width: 90%; /* Em telas pequenas, ocupa 90% da largura */
-    max-width: 1000px; /* Em telas grandes, a largura máxima será 1000px */
-    margin: 0 auto; /* O truque mágico para centralizar horizontalmente */
-    padding: 20px 0; /* Um espaçamento vertical */
+    width: 90%;
+    /* Em telas pequenas, ocupa 90% da largura */
+    max-width: 1000px;
+    /* Em telas grandes, a largura máxima será 1000px */
+    margin: 0 auto;
+    /* O truque mágico para centralizar horizontalmente */
+    padding: 20px 0;
+    /* Um espaçamento vertical */
 }
 
 /* Vamos aplicar o container a todas as nossas seções */
-.hero, .projects, .skills, .about {
+.hero,
+.projects,
+.skills,
+.about {
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -122,30 +140,40 @@ header nav {
 /* HERO */
 
 .hero {
-    display: flex; /* Ativa o Flexbox */
-    flex-direction: column; /* Empilha os itens verticalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Garante que o texto dentro dos elementos também seja centralizado */
-    min-height: 80vh; /* Faz a seção ter no mínimo 80% da altura da tela */
-    padding-top: 100px; /* Adiciona um espaço no topo para não ficar atrás do header */
+    display: flex;
+    /* Ativa o Flexbox */
+    flex-direction: column;
+    /* Empilha os itens verticalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    /* Garante que o texto dentro dos elementos também seja centralizado */
+    min-height: 80vh;
+    /* Faz a seção ter no mínimo 80% da altura da tela */
+    padding-top: 100px;
+    /* Adiciona um espaço no topo para não ficar atrás do header */
 }
 
 .hero h1 {
-    font-size: 3rem; /* rem é uma unidade de medida relativa, boa para acessibilidade */
+    font-size: 3rem;
+    /* rem é uma unidade de medida relativa, boa para acessibilidade */
     margin-bottom: 0.5rem;
 }
 
 .hero h2 {
     font-size: 1.5rem;
-    color: var(--cor-destaque); /* Usando nossa cor de destaque! */
+    color: var(--cor-destaque);
+    /* Usando nossa cor de destaque! */
     margin-bottom: 1.5rem;
 }
 
 .hero p {
     font-size: 1.1rem;
     color: var(--cor-texto-secundario);
-    max-width: 600px; /* Evita que o parágrafo fique muito largo em telas grandes */
+    max-width: 600px;
+    /* Evita que o parágrafo fique muito largo em telas grandes */
     margin-bottom: 2rem;
 }
 
@@ -159,7 +187,8 @@ header nav {
 /* No mobile (padrão), a imagem fica em cima e o texto embaixo */
 .about-container {
     display: flex;
-    flex-direction: column; /* Padrão mobile-first */
+    flex-direction: column;
+    /* Padrão mobile-first */
     align-items: center;
     gap: 2rem;
     text-align: center;
@@ -168,8 +197,10 @@ header nav {
 .about-image img {
     width: 500px;
     height: 500px;
-    border-radius: 50%; /* Deixa a foto redonda! */
-    object-fit: cover; /* Garante que a foto não fique distorcida */
+    border-radius: 50%;
+    /* Deixa a foto redonda! */
+    object-fit: cover;
+    /* Garante que a foto não fique distorcida */
 
 }
 
@@ -186,30 +217,37 @@ header nav {
 /* SOCIALS LINKS */
 
 .social-links {
-    display: flex; /* Coloca os links lado a lado */
-    gap: 1rem; /* Cria um espaço de 16px (geralmente) entre os links */
+    display: flex;
+    /* Coloca os links lado a lado */
+    gap: 1rem;
+    /* Cria um espaço de 16px (geralmente) entre os links */
 }
 
 .social-links a {
-    padding: 15px 15px; /* Espaçamento interno para criar o "corpo" do botão */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Animação suave */
+    padding: 15px 15px;
+    /* Espaçamento interno para criar o "corpo" do botão */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Animação suave */
 }
 
 /* Efeito ao passar o mouse por cima */
 .social-links a:hover {
-    transform: scale(1.3); /* Aumenta um pouquinho o tamanho do botão */
+    transform: scale(1.3);
+    /* Aumenta um pouquinho o tamanho do botão */
 }
 
 .social-links a img {
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-    height: 50px; /* Ajuste o tamanho conforme necessário */
+    width: 50px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 50px;
+    /* Ajuste o tamanho conforme necessário */
 }
 
 /* PROJECTS */
 
 .projects {
     text-align: center;
-    padding-left:25px;
+    padding-left: 25px;
 }
 
 .projects h2 {
@@ -222,27 +260,34 @@ header nav {
     /* Cria colunas de no mínimo 280px e no máximo 1 fração do espaço.
        Isso é a chave para a responsividade! */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem; /* Espaço entre os cards */
-    text-align: left; /* Alinha o texto dos cards à esquerda */
+    gap: 2rem;
+    /* Espaço entre os cards */
+    text-align: left;
+    /* Alinha o texto dos cards à esquerda */
 }
 
 .project-card {
-    background-color: var(--cor-surface); /* Nossa cor de superfície */
+    background-color: var(--cor-surface);
+    /* Nossa cor de superfície */
     border-radius: 8px;
-    overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+    overflow: hidden;
+    /* Garante que a imagem não "vaze" das bordas arredondadas */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-15px); /* Efeito sutil de levantar o card */
+    transform: translateY(-15px);
+    /* Efeito sutil de levantar o card */
 }
 
 .project-card img {
     width: 100%;
-    height: 180px; /* Altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    height: 180px;
+    /* Altura fixa para as imagens */
+    object-fit: cover;
+    /* Garante que a imagem cubra a área sem distorcer */
 }
 
 .project-card h3 {
@@ -254,7 +299,8 @@ header nav {
     font-size: 1rem;
     color: var(--cor-texto-secundario);
     padding: 0 1.5rem;
-    flex-grow: 1; /* Truque de flexbox para empurrar os links para baixo */
+    flex-grow: 1;
+    /* Truque de flexbox para empurrar os links para baixo */
 }
 
 .project-links {
@@ -264,7 +310,8 @@ header nav {
 }
 
 .project-links a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* TECNOLOGIAS */
@@ -292,18 +339,23 @@ header nav {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    gap: 0.5rem;
+    /* Espaço entre o ícone e o texto */
     transition: transform 0.3s ease;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px); /* Mesmo efeito dos cards de projeto! */
+    transform: translateY(-5px);
+    /* Mesmo efeito dos cards de projeto! */
 }
 
 .skill-item img {
-    height: 50px; /* Altura fixa para todos os ícones */
+    height: 50px;
+    /* Altura fixa para todos os ícones */
     width: auto;
 }
 
@@ -315,10 +367,10 @@ header nav {
 
 /* FORMULÁRIO */
 
-/* --- Seção de Contato --- */
 .contact {
     text-align: center;
-    padding-bottom: 80px; /* Mais espaço no final */
+    padding-bottom: 80px;
+    /* Mais espaço no final */
 }
 
 .contact h2 {
@@ -352,8 +404,7 @@ header nav {
     color: var(--cor-texto-secundario);
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 12px;
     border-radius: 5px;
@@ -365,11 +416,11 @@ header nav {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--cor-destaque);
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3); /* Um brilho sutil ao focar */
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
+    /* Um brilho sutil ao focar */
 }
 
 .submit-button {
@@ -384,7 +435,8 @@ header nav {
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 100%; /* Botão com largura total */
+    width: 100%;
+    /* Botão com largura total */
 }
 
 .submit-button:hover {
@@ -401,7 +453,8 @@ header nav {
 
 /* FOOTER */
 
-footer {background-color: var(--cor-surface);
+footer {
+    background-color: var(--cor-surface);
     text-align: center;
     padding: 2rem 0;
     margin-top: 4rem;
@@ -409,19 +462,26 @@ footer {background-color: var(--cor-surface);
 }
 
 @media (min-width: 768px) {
+
     /* --- Seção Sobre Mim para telas maiores --- */
     .about-container {
-        flex-direction: row; /* Itens lado a lado */
-        text-align: left; /* Alinha o texto à esquerda */
-        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        flex-direction: row;
+        /* Itens lado a lado */
+        text-align: left;
+        /* Alinha o texto à esquerda */
+        justify-content: center;
+        /* Centraliza o conteúdo horizontalmente */
         gap: 3rem;
     }
 
     .about-image {
-        flex-shrink: 0; /* Impede que a imagem encolha */
+        flex-shrink: 0;
+        /* Impede que a imagem encolha */
     }
 
     .about-text {
         text-align: left;
     }
 }
+
+/* MENU HAMBURGER */
