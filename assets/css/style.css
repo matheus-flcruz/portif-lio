@@ -19,8 +19,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     background-color: var(--cor-primaria);
     font-family: 'Poppins', sans-serif;
@@ -524,6 +522,7 @@ footer {
         /* Começa fora da tela */
         width: 200px;
         height: calc(100% - 80px);
+        gap: 0;
         background-color: rgba(18, 18, 18, 0.8);
         backdrop-filter: blur(10px);
         /* Adiciona o mesmo efeito de vidro do header! */
@@ -543,6 +542,7 @@ footer {
         /* Garante que a borda arredondada não seja aplicada aqui */
         border-radius: 0;
         background-color: rgba(18, 18, 18, 0.8);
+        padding: 10px 0;
     }
 
     .nav-menu a:hover {
