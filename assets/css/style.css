@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --cor-primaria: #020228; /* Roxo vibrante */
-    --cor-texto-primario: #FFFFFF; /* Branco */
-    --cor-texto-secundario: #a7a7a7; /* Um cinza claro para textos de apoio */
-    --cor-destaque: #5516ba; /* Um roxo vibrante para links e botões */
-    --cor-surface:  rgba(211, 211, 211, 0.06); /* Cor de "superfície" para os cards de projeto */
+    --cor-primaria: #020228;
+    /* Roxo vibrante */
+    --cor-texto-primario: #FFFFFF;
+    /* Branco */
+    --cor-texto-secundario: #a7a7a7;
+    /* Um cinza claro para textos de apoio */
+    --cor-destaque: #5516ba;
+    /* Um roxo vibrante para links e botões */
+    --cor-surface: rgba(211, 211, 211, 0.06);
+    /* Cor de "superfície" para os cards de projeto */
 }
 
 * {
@@ -113,7 +118,8 @@ header nav {
 /* MENU HAMBURGER */
 
 .menu-hamburguer {
-    display: none; /* Escondido por padrão, só aparece no mobile */
+    display: none;
+    /* Escondido por padrão, só aparece no mobile */
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
@@ -421,7 +427,8 @@ header nav {
     color: var(--cor-texto-secundario);
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 12px;
     border-radius: 5px;
@@ -433,7 +440,8 @@ header nav {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--cor-destaque);
     box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
@@ -512,17 +520,34 @@ footer {
     .nav-menu {
         position: fixed;
         top: 80px;
-        right: -100%; /* Começa fora da tela */
+        right: -100%;
+        /* Começa fora da tela */
         width: 200px;
         height: calc(100% - 80px);
         background-color: rgba(18, 18, 18, 0.8);
-        backdrop-filter: blur(10px); /* Adiciona o mesmo efeito de vidro do header! */
+        backdrop-filter: blur(10px);
+        /* Adiciona o mesmo efeito de vidro do header! */
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
-        gap: 1.5rem;
         transition: right 0.3s ease;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        /* Sombra para dar profundidade */
+    }
+
+    .nav-menu li {
+        /* Faz o link ocupar toda a largura do menu */
+        width: 100%;
+        /* Centraliza o texto do link */
+        text-align: center;
+        /* Garante que a borda arredondada não seja aplicada aqui */
+        border-radius: 0;
+        background-color: rgba(18, 18, 18, 0.8);
+    }
+
+    .nav-menu a:hover {
+        /* Um efeito de hover sutil para o mobile */
+        background-color: var(--cor-surface);
     }
 
     .nav-menu.active {
