@@ -216,13 +216,14 @@ header nav {
 }
 
 .about-image img {
-    width: 500px;
-    height: 500px;
+    /* Faz a imagem ter no máximo 90% da largura do container dela */
+    width: 90%;     
+    /* Define uma largura máxima para não ficar gigante em telas grandes */
+    max-width: 350px; 
+    /* Garante que a altura seja igual à largura para um círculo perfeito */
+    aspect-ratio: 1 / 1; 
     border-radius: 50%;
-    /* Deixa a foto redonda! */
     object-fit: cover;
-    /* Garante que a foto não fique distorcida */
-
 }
 
 .about-text {
@@ -268,7 +269,6 @@ header nav {
 
 .projects {
     text-align: center;
-    padding-left: 25px;
 }
 
 .projects h2 {
@@ -339,7 +339,6 @@ header nav {
 
 .skills {
     text-align: center;
-    padding-left: 25px;
 }
 
 .skills h2 {
