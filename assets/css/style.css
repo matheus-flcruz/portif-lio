@@ -139,13 +139,13 @@ header nav {
 
 /* Classe utilitária para centralizar o conteúdo */
 .container {
-    width: 90%;
+    width: 100%;
     /* Em telas pequenas, ocupa 90% da largura */
     max-width: 1000px;
     /* Em telas grandes, a largura máxima será 1000px */
     margin: 0 auto;
     /* O truque mágico para centralizar horizontalmente */
-    padding: 20px 0;
+    padding: 0 20px;
     /* Um espaçamento vertical */
 }
 
@@ -564,5 +564,9 @@ footer {
 
     .menu-hamburguer.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Diminui a fonte do logo em telas menores */
     }
 }
