@@ -141,13 +141,9 @@ header nav {
 /* Classe utilitária para centralizar o conteúdo */
 .container {
     width: 100%;
-    /* Em telas pequenas, ocupa 90% da largura */
     max-width: 1000px;
-    /* Em telas grandes, a largura máxima será 1000px */
     margin: 0 auto;
-    /* O truque mágico para centralizar horizontalmente */
     padding: 0 20px;
-    /* Um espaçamento vertical */
 }
 
 /* Vamos aplicar o container a todas as nossas seções */
@@ -510,6 +506,10 @@ footer {
 /* MENU HAMBURGER */
 
 @media (max-width: 768px) {
+    main {
+        padding: 0 15px;
+    }
+    
     .menu-hamburguer {
         display: flex;
         /* Agora sim, aparece no mobile */
