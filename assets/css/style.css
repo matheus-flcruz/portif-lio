@@ -11,6 +11,7 @@
     /* Um roxo vibrante para links e botões */
     --cor-surface: rgba(211, 211, 211, 0.06);
     /* Cor de "superfície" para os cards de projeto */
+    --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
 }
 
 * {
@@ -445,10 +446,14 @@ header nav {
 .submit-button {
     display: inline-block;
     padding: 12px 30px;
-    background-color: var(--cor-destaque);
+    /* background-color: var(--cor-destaque); */
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
     color: var(--cor-texto-primario);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: 500;
     font-size: 1.1rem;
     border: none;
@@ -456,6 +461,7 @@ header nav {
     transition: transform 0.3s ease, background-color 0.3s ease;
     width: 100%;
     /* Botão com largura total */
+    margin-left: 250px;
 }
 
 .submit-button:hover {
