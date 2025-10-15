@@ -24,7 +24,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--cor-texto-primario);
     line-height: 1.6;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 li {
