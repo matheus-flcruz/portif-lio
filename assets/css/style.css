@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-color: var(--cor-primaria);
     font-family: 'Poppins', sans-serif;
     color: var(--cor-texto-primario);
